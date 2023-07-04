@@ -1,0 +1,1 @@
+const isLemmy = document.head.querySelector("[name~=Description][content]")?.content === "Lemmy";
