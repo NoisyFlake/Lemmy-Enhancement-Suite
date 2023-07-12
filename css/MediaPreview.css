@@ -5,47 +5,41 @@ button.thumbnail svg.icon,
 }
 
 button.les-expand {
-    background: none;
     border: none;
     padding: 0;
     width: 23px;
     height: 23px;
-    margin: 2px 5px 2px 0;
+    margin: 0;
+    background: rgba(var(--bs-body-color-rgb), 0.4) url(../img/sprite-expand.png) no-repeat;
+    background-size: 23px 101px;
+    border-radius: 3px;
+}
+
+button.les-expand:hover {
+    background-color: rgba(var(--bs-body-color-rgb), 0.6)
+}
+
+@media (prefers-color-scheme: dark) {
+    button.les-expand {
+        background-color: rgba(var(--bs-body-color-rgb), 0.3);
+    }
+
+    button.les-expand:hover {
+        background-color: rgba(var(--bs-body-color-rgb), 0.2)
+    }
 }
 
 button.les-expand.image {
-    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMyIgaGVpZ2h0PSIyMyIgdmlld0JveD0iMCAwIDIzIDIzIj4KCTxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIyMyIgaGVpZ2h0PSIyMyIgcng9IjIuNSIgcnk9IjIuNSIgZmlsbD0icmdiKDIwNCwgMjA0LCAyMDEpIiAvPgoJPGcgZmlsbD0id2hpdGUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CgkJPHBhdGgKCQkJZD0iCgkJCQlNNCw1IGwxLC0uNSBoMiBsMSwuNSBoMSBsMSwtMSBoMyBsMiwyIGgyCgkJCQl2OCBoLTEzegoJCQkJTTUsNiBoMiB2MSBoLTIgdi0xegoJCQkJTSAxMS41IDkuNSBtIC0zLjUsIDAgYSAzLjUsMy41IDAgMSwwIDcsMCBhIDMuNSwzLjUgMCAxLDAgLTcsMAoJCQkJTSAxMS41IDkuNSBtIC0yLjUsIDAgYSAyLjUsMi41IDAgMSwwIDUsMCBhIDIuNSwyLjUgMCAxLDAgLTUsMAoJCQkiCgkJLz4KCTwvZz4KCTxnIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiPgoJCTxsaW5lIHgxPSIxOC43NSIgeTE9IjE2LjUiIHgyPSIxOC43NSIgeTI9IjIxIiAvPgoJCTxsaW5lIHgxPSIxNi41IiB5MT0iMTguNzUiIHgyPSIyMSIgeTI9IjE4Ljc1IiAvPgoJPC9nPgo8L3N2Zz4=);
-}
-
-button.les-expand.image:hover {
-    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMyIgaGVpZ2h0PSIyMyIgdmlld0JveD0iMCAwIDIzIDIzIj4KCTxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIyMyIgaGVpZ2h0PSIyMyIgcng9IjIuNSIgcnk9IjIuNSIgZmlsbD0icmdiKDcwLCAxMDEsIDE1MykiIC8+Cgk8ZyBmaWxsPSJ3aGl0ZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KCQk8cGF0aAoJCQlkPSIKCQkJCU00LDUgbDEsLS41IGgyIGwxLC41IGgxIGwxLC0xIGgzIGwyLDIgaDIKCQkJCXY4IGgtMTN6CgkJCQlNNSw2IGgyIHYxIGgtMiB2LTF6CgkJCQlNIDExLjUgOS41IG0gLTMuNSwgMCBhIDMuNSwzLjUgMCAxLDAgNywwIGEgMy41LDMuNSAwIDEsMCAtNywwCgkJCQlNIDExLjUgOS41IG0gLTIuNSwgMCBhIDIuNSwyLjUgMCAxLDAgNSwwIGEgMi41LDIuNSAwIDEsMCAtNSwwCgkJCSIKCQkvPgoJPC9nPgoJPGcgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCI+CgkJPGxpbmUgeDE9IjE4Ljc1IiB5MT0iMTYuNSIgeDI9IjE4Ljc1IiB5Mj0iMjEiIC8+CgkJPGxpbmUgeDE9IjE2LjUiIHkxPSIxOC43NSIgeDI9IjIxIiB5Mj0iMTguNzUiIC8+Cgk8L2c+Cjwvc3ZnPg==);
-}
-
-button.les-expand.image.expanded {
-    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMyIgaGVpZ2h0PSIyMyIgdmlld0JveD0iMCAwIDIzIDIzIj4KCTxjaXJjbGUgY3g9IjExLjUiIGN5PSIxMS41IiByPSIxMS41IiBmaWxsPSJyZ2IoMjA0LCAyMDQsIDIwMSkiIC8+Cgk8ZwoJCXN0cm9rZT0id2hpdGUiCgkJc3Ryb2tlLXdpZHRoPSIzLjI1IgoJCXN0cm9rZS1saW5lY2FwPSJyb3VuZCIKCT4KCQk8bGluZSB4MT0iNy41IiB5MT0iNy41IiB4Mj0iMTUuNSIgeTI9IjE1LjUiIC8+CgkJPGxpbmUgeDE9IjE1LjUiIHkxPSI3LjUiIHgyPSI3LjUiIHkyPSIxNS41IiAvPgoJPC9nPgo8L3N2Zz4=);
-}
-
-button.les-expand.image.expanded:hover {
-    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMyIgaGVpZ2h0PSIyMyIgdmlld0JveD0iMCAwIDIzIDIzIj4KCTxjaXJjbGUgY3g9IjExLjUiIGN5PSIxMS41IiByPSIxMS41IiBmaWxsPSJyZ2IoNzAsIDEwMSwgMTUzKSIgLz4KCTxnCgkJc3Ryb2tlPSJ3aGl0ZSIKCQlzdHJva2Utd2lkdGg9IjMuMjUiCgkJc3Ryb2tlLWxpbmVjYXA9InJvdW5kIgoJPgoJCTxsaW5lIHgxPSI3LjUiIHkxPSI3LjUiIHgyPSIxNS41IiB5Mj0iMTUuNSIgLz4KCQk8bGluZSB4MT0iMTUuNSIgeTE9IjcuNSIgeDI9IjcuNSIgeTI9IjE1LjUiIC8+Cgk8L2c+Cjwvc3ZnPg==);
+    background-position: 0px -52px;
 }
 
 button.les-expand.text {
-    background-image: url(https://www.redditstatic.com/sprite-expando.69EqpDZz3HM.png);
-    background-position: 0px -130px;
-    background-repeat: no-repeat;
-    background-size: 23px 302px;
+    background-position: 0px -78px;
 }
 
-button.les-expand.text:hover {
-    background-position: 0px -104px;
-}
-
-button.les-expand.text.expanded {
-    background-position: 0px -26px;
-}
-
-button.les-expand.text.expanded:hover {
+button.les-expand.expanded {
     background-position: 0px 0px;
+    border-radius: 50%;
 }
 
 .post-listings .post-listing>.post-metadata-card,
@@ -54,10 +48,18 @@ button.les-expand.text.expanded:hover {
     display: none !important;
 }
 
+.les-content {
+    margin-top: 8px;
+}
+
 .les-content.hidden {
     display: none;
 }
 
-.img-expanded {
+.les-content .img-expanded {
     max-height: 600px;
+}
+
+.d-flex.text-muted {
+    margin-top: 8px;
 }

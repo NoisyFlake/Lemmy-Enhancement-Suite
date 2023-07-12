@@ -2,13 +2,9 @@
 
   "manifest_version": 2,
   "name": "Lemmy Enhancement Suite",
-  "version": "1.0",
+  "version": "1.0.1",
 
   "description": "A RES-like experience for Lemmy",
-
-  "icons": {
-    "48": "icons/les-48.png"
-  },
 
   "content_scripts": [
     {
@@ -16,6 +12,12 @@
       "js": ["les.js", "js/MediaPreview.js"],
       "css" : ["css/MediaPreview.css"]
     }
-  ]
+  ],
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "lemmy-enhancement-suite@noisyflake.com"
+    }
+  }
 
 }
